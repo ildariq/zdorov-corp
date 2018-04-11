@@ -16,42 +16,18 @@
     var sheetCurrentY; // координата для параллельного с окном браузера скролла новостной колонки
     var lastSheetCurrentY; // текущая координата последнего блока новостной колонки
     var lastSheetCorrectY; // для корректировки координаты последнего блока новостной колонки
-    var lastBannerY = 0; // координаты последнего баннера
     console.log("Window.scrollTop = " + $(window).scrollTop());
 
     $(window).scroll(function() {
       // Листаем колонку паралелльно со скроллом окна
       windowCurrentY = $(this).scrollTop();
       sheetCurrentY = windowCurrentY * 2;
-      if (lastBannerY == 0) {
-        $(".sheet").css("transform", "translate3d(0px, " + -sheetCurrentY + "px, 0px)");
-      }
-      // Пролистываем колонку на последнем экране
+      $(".sheet").css("transform", "translate3d(0px, " + -sheetCurrentY + "px, 0px)");
+      // Плавное исчесновение новостей и скролл к последнему экрану
       if (parseInt(windowCurrentY + $(window).height()) >= parseInt($('#stopBanner').offset().top)) {
-        news.addClass("stopped");
-      } else if (windowCurrentY == 0) {
-        news.removeClass("stopped");
-      }
-
-      // Скрываем последний экран при скролле вверх
-      if (lastBannerY != 0) {
-        if (parseInt(windowCurrentY + $(window).height()) <= parseInt($('#stopBanner').offset().top)) {
-          $("#lastBanner").css("display", "none");
-          news.css("z-index", "1");
-      }
-    }
-    });
-
-    // Останавливаем колонку на последнем экране
-    news.on('scroll', function() {
-      lastSheetCurrentY = parseInt($('#lastSheet').offset().top);
-      lastSheetCorrectY = lastSheetCurrentY - windowCurrentY;
-      console.log("lastSheetCorrectY = " + lastSheetCorrectY);
-      lastBannerY = parseInt($('#lastBanner').offset().top);
-      if (lastSheetCorrectY < 0) {
-        $("#lastBanner").css("display", "block");
-        lastBannerY = parseInt($('#lastBanner').offset().top);
-          news.css("z-index", "-1");
+        news.fadeOut();
+      } else {
+        news.fadeIn();
       }
     });
 

@@ -1969,9 +1969,6 @@ jq-selectbox ul,
     font-size: 4.5rem;
   }
 }
-#lastBanner {
-  display: none;
-}
 .banners {
   left: 0;
 }
