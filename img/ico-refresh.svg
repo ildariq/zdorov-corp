@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="25px" viewBox="0 0 22 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-454.000000, -799.000000)">
+        <g id="Group-2" transform="translate(455.000000, 797.000000)">
+            <path d="M10,6 C4.4771525,6 0,10.4771525 0,16 C0,21.5228475 4.4771525,26 10,26 C15.5228475,26 20,21.5228475 20,16" id="Oval-2" stroke="#FFFF7B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Rectangle-4" fill="#FFFF7B" transform="translate(10.575825, 5.959709) rotate(-315.000000) translate(-10.575825, -5.959709) " points="6.7688447 4.17354346 14.3828057 2.15272818 12.3619904 9.76668921"></polygon>
+        </g>
+    </g>
+</svg>
